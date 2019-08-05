@@ -1,4 +1,4 @@
-=var NeatoLib = {
+var NeatoLib = {
 
 	version: "0.9.24",
 
@@ -1078,7 +1078,11 @@
 				NeatoLib.Changelog.createChangeWindow(plugin.getName(), [], plugin.getChanges());
 			}));
 
-			
+			right.insertAdjacentElement("afterbegin", NeatoLib.Settings.Elements.createButton("Join Support Server", () => {
+				window.open("https://google.com");
+			}, "float:left"));
+
+			element.insertAdjacentElement("beforeend", right);
 
 			NeatoLib.Settings.pushElement(element, plugin.getName());
 
