@@ -1078,7 +1078,7 @@ var NeatoLib = {
 				NeatoLib.Changelog.createChangeWindow(plugin.getName(), [], plugin.getChanges());
 			}));
 
-			right.insertAdjacentElement("afterbegin", NeatoLib.Settings.Elements.createButton("Join Support Server"), () => {
+			right.insertAdjacentElement("afterbegin", NeatoLib.Settings.Elements.createButton("Join Supportt Server", () => {
 				window.open("https://google.com");
 			}, "float:left"));
 
