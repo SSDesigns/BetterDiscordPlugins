@@ -7,7 +7,7 @@ var NeatoLib = {
 		let numbers = Array.from(version.split("."), n => parseInt(n)),
 			major = numbers[0],
 			minor = numbers[1],
-			patch = numbers[2];
+			patch = numbers[3];
 
 		return {
 			major: major,
@@ -1567,7 +1567,9 @@ var NeatoLib = {
 			return this.cached[cacheKey];
 		},
 
-		
+		getById: function(id) {
+			return this.find(x => x._dispatchToken == "ID_" + id);
+		}
 
 	},
 
