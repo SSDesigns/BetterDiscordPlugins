@@ -1074,11 +1074,11 @@ var NeatoLib = {
 
 			right.style.paddingTop = "20px";
 
-			right.insertAdjacentElement("beforeend", NeatoLib.Settings.Elements.createButton("View Changelog", () => {
+			right.insertAdjacentElement("beforeend", NeatoLib.Settings.Elements.createButton("View Changelog?", () => {
 				NeatoLib.Changelog.createChangeWindow(plugin.getName(), [], plugin.getChanges());
 			}));
 
-			right.insertAdjacentElement("afterbegin", NeatoLib.Settings.Elements.createButton("Join Support Server", () => {
+			right.insertAdjacentElement("afterbegin", NeatoLib.Settings.Elements.createButton("Join Support Server Test", () => {
 				window.open("https://discord.gg/yNqzuJa");
 			}, "float:left"));
 
