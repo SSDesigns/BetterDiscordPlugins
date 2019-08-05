@@ -1078,11 +1078,7 @@
 				NeatoLib.Changelog.createChangeWindow(plugin.getName(), [], plugin.getChanges());
 			}));
 
-			right.insertAdjacentElement("afterbegin", NeatoLib.Settings.Elements.createButton("Join Support Server Test", () => {
-				window.open("https://google.com");
-			}, "float:left"));
-
-			element.insertAdjacentElement("beforeend", right);
+			
 
 			NeatoLib.Settings.pushElement(element, plugin.getName());
 
