@@ -29,7 +29,7 @@ var NeatoLib = {
 			const updateLibrary = () => {
 				const vm = require("vm");
 
-				fetch("https://raw.githubusercontent.com/SSDesigns/BetterDiscordPlugins/master/Lib/NeatoBurritoLibrary.js" { cache: "no-cache" }).then(r => r.text()).then(data => {
+				fetch("https://raw.githubusercontent.com/SSDesigns/BetterDiscordPlugins/master/Lib/NeatoBurritoLibrary.js", { cache: "no-cache" }).then(r => r.text()).then(data => {
 					let lib = new vm.Script(data, {
 						filename: "NeatoBurritoLibrary.js",
 						displayErrors: true
@@ -57,7 +57,7 @@ var NeatoLib = {
 	forceLibUpdate: function() {
 		const vm = require("vm");
 
-		fetch("https://raw.githubusercontent.com/SSDesigns/BetterDiscordPlugins/master/Lib/NeatoBurritoLibrary.js," { cache: "no-cache" }).then(r => r.text()).then(data => {
+		fetch("https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Lib/NeatoBurritoLibrary.js", { cache: "no-cache" }).then(r => r.text()).then(data => {
 			const lib = new vm.Script(data, { filename: "NeatoBurritoLibrary.js", displayErrors: true });
 
 			new Promise(e => e(lib.runInThisContext())).then(() => NeatoLib.showToast("Lib updated!", "success"));
@@ -1078,8 +1078,8 @@ var NeatoLib = {
 				NeatoLib.Changelog.createChangeWindow(plugin.getName(), [], plugin.getChanges());
 			}));
 
-			right.insertAdjacentElement("afterbegin", NeatoLib.Settings.Elements.createButton("Join Support Server TESTING", () => {
-				window.open("https://discord.gg/5ejGrD");
+			right.insertAdjacentElement("afterbegin", NeatoLib.Settings.Elements.createButton("Join Support Server", () => {
+				window.open("https://discord.gg/yNqzuJa");
 			}, "float:left"));
 
 			element.insertAdjacentElement("beforeend", right);
@@ -1708,7 +1708,7 @@ var NeatoLib = {
 
 		check: function(plugin, path) {
 
-			let url = path ? path : "https://rawgit.com/SSDesigns/BetterDiscordPlugins/master/" + plugin.getName().split(" ").join("") + ".plugin.js";
+			let url = path ? path : "https://rawgit.com/Metalloriff/BetterDiscordPlugins/master/" + plugin.getName().split(" ").join("") + ".plugin.js";
 
 			if (typeof window.PluginUpdates == "undefined") window.PluginUpdates = {
 				plugins: {}
