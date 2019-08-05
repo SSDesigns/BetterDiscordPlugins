@@ -1567,11 +1567,9 @@ var NeatoLib = {
 			return this.cached[cacheKey];
 		},
 
-		getById: function(id) {
-			return this.find(x => x._dispatchToken == "ID_" + id);
-		}
+		
 
-	},
+	}
 
 	Updates: { //Based off of Zerebos' PluginLibrary. https://rauenzi.github.io/BetterDiscordAddons/docs/PluginLibrary.js
 
