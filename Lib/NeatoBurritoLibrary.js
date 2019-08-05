@@ -1079,7 +1079,7 @@ var NeatoLib = {
 			}));
 
 			right.insertAdjacentElement("afterbegin", NeatoLib.Settings.Elements.createButton("Join Support Server", () => {
-				window.open("https://discord.gg/yNqzuJa");
+				window.open("https://discord.gg/K3VFRB");
 			}, "float:left"));
 
 			element.insertAdjacentElement("beforeend", right);
