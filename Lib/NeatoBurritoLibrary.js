@@ -57,7 +57,7 @@ var NeatoLib = {
 	forceLibUpdate: function() {
 		const vm = require("vm");
 
-		fetch("https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Lib/NeatoBurritoLibrary.js", { cache: "no-cache" }).then(r => r.text()).then(data => {
+		fetch("https://raw.githubusercontent.com/SSDesigns/BetterDiscordPlugins/master/Lib/NeatoBurritoLibrary.js", { cache: "no-cache" }).then(r => r.text()).then(data => {
 			const lib = new vm.Script(data, { filename: "NeatoBurritoLibrary.js", displayErrors: true });
 
 			new Promise(e => e(lib.runInThisContext())).then(() => NeatoLib.showToast("Lib updated!", "success"));
@@ -1567,9 +1567,7 @@ var NeatoLib = {
 			return this.cached[cacheKey];
 		},
 
-		getById: function(id) {
-			return this.find(x => x._dispatchToken == "ID_" + id);
-		}
+		
 
 	},
 
