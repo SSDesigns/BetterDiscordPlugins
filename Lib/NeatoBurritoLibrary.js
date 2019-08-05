@@ -1,4 +1,4 @@
-var NeatoLib = {
+=var NeatoLib = {
 
 	version: "0.9.24",
 
@@ -1074,12 +1074,12 @@ var NeatoLib = {
 
 			right.style.paddingTop = "20px";
 
-			right.insertAdjacentElement("beforeend", NeatoLib.Settings.Elements.createButton("View Changelog?", () => {
+			right.insertAdjacentElement("beforeend", NeatoLib.Settings.Elements.createButton("View Changelog", () => {
 				NeatoLib.Changelog.createChangeWindow(plugin.getName(), [], plugin.getChanges());
 			}));
 
 			right.insertAdjacentElement("afterbegin", NeatoLib.Settings.Elements.createButton("Join Support Server Test", () => {
-				window.open("https://discord.gg/yNqzuJaa");
+				window.open("https://google.com");
 			}, "float:left"));
 
 			element.insertAdjacentElement("beforeend", right);
